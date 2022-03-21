@@ -1,0 +1,41 @@
+db.mensajes.insertMany([
+    
+    {
+    _id: ObjectId(),
+    nombre: "Osman",
+    correo: "osmanquiroz95@gmail.com",
+    mensaje: "Hola, Muy buen servicio, espero contactarte nuevamente",
+
+    }
+
+ 
+]);
+
+
+
+
+ <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Tu nombre" required [(ngModel)]="nombre" >
+            </div>
+            <div class="form-group mt-3">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" [(ngModel)]="correo" required>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Tu Teléfono" [(ngModel)]="telefono" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Tu mensaje" [(ngModel)]="mensaje" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit" (click)="enviarMensaje()">Enviar mensaje</button></div>
+          </form>
+
+
+  
+
+

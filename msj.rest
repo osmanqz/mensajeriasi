@@ -1,0 +1,15 @@
+## 
+
+GET http://localhost:8888/mensajes
+
+
+###
+POST  http://localhost:8888/mensajes
+Content-Type: application/json
+
+{
+    "nombre": "Osman2",
+    "correo": "osman2@gmail.com",
+    "mensaje": "hey2",
+    "telefono": "999999992"
+}
