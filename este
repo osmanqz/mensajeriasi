@@ -1,0 +1,38 @@
+var mongoose = require('mongoose');
+
+// var servidor = 'localhost:27017';
+// var db = 'playstore';
+// const SERVIDOR = process.env.SERVIDOR;  
+// const DB = process.env.DB;  
+const { SERVIDOR, DB } = process.env;
+const MONGODB_URI = `mongodb://${SERVIDOR}/${DB}`;
+
+mongoose.connect('mongodb+srv://moises:asd.456@cluster0.dad8y.mongodb.net/mj?retryWrites=true&w=majority', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true, 
+    useFindAndModify: false,
+    useCreateIndex: true
+})
+.then(db =>console.log('Base Conectada'))
+.catch(err=>console.log(err));
+
+// class Database{
+//     constructor(){
+//         //Promesas
+//         mongoose.connect(`mongodb://${SERVIDOR}/${DB}`,
+//             {
+//                 useUnifiedTopology: true,
+//                 useNewUrlParser: true, 
+//                 useFindAndModify: false,
+//                 useCreateIndex: true
+//             }
+//         )
+//         .then(()=>{
+//             console.log('Se conecto a mongo');
+//         }).catch((error)=>{
+//             console.log(error);
+//         });
+//     }
+// }
+
+// module.exports = new Database();

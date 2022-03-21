@@ -1,3 +1,4 @@
+require('dotenv').config(); 
 var express = require('express'); // importamos el modulo express
 var bodyParser = require('body-parser'); // para utilizar Post
 var cors = require('cors');
@@ -6,9 +7,10 @@ const { json } = require('express');
 
 
 
-var app = express(); //para armar todo el ResApi
+
 var database = require('./modulos/database');
 var mensajesRouter = require('./routes/mensajes'); //importamos las rutas
+var app = express(); //para armar todo el ResApi
 
 
 
